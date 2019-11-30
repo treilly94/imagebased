@@ -16,3 +16,16 @@ resource "digitalocean_droplet" "main" {
   ipv6     = true
   ssh_keys = ["b7:ed:94:c8:3f:b7:59:40:a6:92:cc:32:72:3b:53:53"]
 }
+
+resource "digitalocean_volume" "data" {
+  region                  = "lon1"
+  name                    = "data"
+  size                    = 5
+  initial_filesystem_type = "ext4"
+  description             = "data volume for main"
+}
+
+resource "digitalocean_volume_attachment" "data-main" {
+  droplet_id = digitalocean_droplet.main.id
+  volume_id  = digitalocean_volume.data.id
+}
