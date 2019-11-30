@@ -17,8 +17,8 @@
 
   "provisioners": [
     {
-      "type": "shell",
-      "inline": "touch /test.txt"
+      "type": "salt-masterless",
+      "local_state_tree": "../salt"
     }
   ],
 
