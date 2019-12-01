@@ -3,7 +3,8 @@ Configure paswordless sudo:
   file.managed:
     - name: /etc/sudoers.d/all
     - makedirs: True
-    - content: 'ALL ALL=(ALL) NOPASSWD: ALL'
+    - contents: 
+      - 'ALL ALL=(ALL) NOPASSWD: ALL'
 
 tom:
   user.present:
@@ -12,6 +13,7 @@ tom:
     - empty_password: true
     - groups:
       - sudo
+      - docker
 
 tom sshkeys:
   ssh_auth.present:

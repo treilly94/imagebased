@@ -1,5 +1,6 @@
 Vagrant.configure("2") do |config|
 
+  # Run `vagrant rsync-auto` to sync the shared directory automatically
   config.vm.synced_folder "..", "/vagrant", type: "rsync"
 
   config.vm.define "main" do |main|
@@ -16,6 +17,7 @@ Vagrant.configure("2") do |config|
       salt.masterless = true
       salt.minion_config = "minion"
       salt.run_highstate = true
+      salt.colorize = false
 
     end
   end
