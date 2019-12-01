@@ -1,10 +1,9 @@
 ---
-# Configure paswordless sudo:
-#   file.line:
-#     - name: /etc/sudoers
-#     - content: 'ALL ALL=(ALL) NOPASSWD: ALL'
-#     - mode: ensure
-#     - before: 'root ALL=(ALL) ALL'
+Configure paswordless sudo:
+  file.managed:
+    - name: /etc/sudoers.d/all
+    - makedirs: True
+    - content: 'ALL ALL=(ALL) NOPASSWD: ALL'
 
 tom:
   user.present:

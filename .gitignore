@@ -1,3 +1,6 @@
+# General
+*.log
+
 # Terraform
 *.tfvars
 *.tfstate*
@@ -5,3 +8,6 @@
 
 # Packer
 packer/variables.json
+
+# Vagrant
+.vagrant
