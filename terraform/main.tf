@@ -17,11 +17,12 @@ resource "digitalocean_droplet" "main" {
 }
 
 resource "digitalocean_volume" "data" {
-  region                  = "lon1"
-  name                    = "data"
-  size                    = 5
-  initial_filesystem_type = "ext4"
-  description             = "data volume for main"
+  region                   = "lon1"
+  name                     = "data"
+  size                     = 5
+  initial_filesystem_type  = "ext4"
+  initial_filesystem_label = "jenkins-home"
+  description              = "data volume for main"
 }
 
 resource "digitalocean_volume_attachment" "data-main" {

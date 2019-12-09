@@ -22,3 +22,10 @@ Enable the jenkins service:
   service.running:
     - name: jenkins 
     - enable: true
+
+Add jenkins disk to fstab:
+  file.line:
+    - name: /etc/fstab
+    - mode: insert
+    - location: end
+    - content: "LABEL=jenkins-home /var/lib/jenkins ext4 defaults,nofail,discard 0"
