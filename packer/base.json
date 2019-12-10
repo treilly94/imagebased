@@ -11,7 +11,7 @@
       "region": "lon1",
       "size": "512mb",
       "ssh_username": "root",
-      "snapshot_name": "base-{{isotime \"2006-01-02\"}}"
+      "snapshot_name": "base-{{isotime \"2006-01-02_03:04\"}}"
     }
   ],
 

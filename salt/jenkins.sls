@@ -20,7 +20,7 @@ Install jenkins:
 
 Enable the jenkins service:
   service.running:
-    - name: jenkins 
+    - name: jenkins
     - enable: true
 
 Add jenkins disk to fstab:

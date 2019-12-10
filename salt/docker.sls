@@ -15,5 +15,5 @@ Install docker-ce:
 
 Enable the docker service:
   service.running:
-    - name: docker 
+    - name: docker
     - enable: true
