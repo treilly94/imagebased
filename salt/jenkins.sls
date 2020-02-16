@@ -35,8 +35,3 @@ Add jenkins disk to fstab:
     - mode: insert
     - location: end
     - content: "LABEL=jenkins-home /var/lib/jenkins ext4 defaults,nofail,discard 0"
-
-Create cron job to set disk permissions:
-  cron.present:
-    - name: "chown -R jenkins:jenkins /var/lib/jenkins"
-    - special: "@reboot"
