@@ -29,3 +29,17 @@ resource "digitalocean_volume_attachment" "data-main" {
   droplet_id = digitalocean_droplet.main.id
   volume_id  = digitalocean_volume.data.id
 }
+
+
+# Volume from snapshot
+
+# data "digitalocean_volume_snapshot" "data" {
+#   name = "data-test"
+# }
+
+# resource "digitalocean_volume" "data" {
+#   region      = "lon1"
+#   name        = "data"
+#   size        = data.digitalocean_volume_snapshot.data.min_disk_size
+#   snapshot_id = data.digitalocean_volume_snapshot.data.id
+# }
