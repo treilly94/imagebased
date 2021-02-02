@@ -1,9 +1,9 @@
 provider "cloudflare" {
-  api_token = var.cloudflare_api_token
+  api_token = var.cloudflare_token
 }
 
 resource "cloudflare_record" "jenkins" {
-  zone_id = var.cloudflare_zone_token
+  zone_id = "015a73c5122b5f3610eed490d5208827"
   name    = "jenkins"
   value   = digitalocean_droplet.main.ipv4_address
   type    = "A"
