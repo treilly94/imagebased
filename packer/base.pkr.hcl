@@ -9,7 +9,7 @@ source "digitalocean" "main" {
   image         = "ubuntu-16-04-x64"
   region        = "lon1"
   size          = "s-1vcpu-1gb"
-  snapshot_name = "base-{{isotime \"2006-01-02_03:04\"}}"
+  snapshot_name = "base-{{isotime \"2006-01-02_15:04\"}}"
   ssh_username  = "root"
 }
 
